@@ -1,0 +1,111 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "24de73ea-7985-43d6-8485-da4aac160a57": {
+        "id": "24de73ea-7985-43d6-8485-da4aac160a57",
+        "parent": null,
+        "name": "sendEmail.py",
+        "type": "PYTHON_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "sendEmail.py",
+        "cursor": {
+          "lineNumber": 4,
+          "column": 1
+        },
+        "config": {
+          "runtime": "python3.8",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": [],
+          "name": "sendEmail"
+        },
+        "triggers": [
+          {
+            "resourceName": "httpApigsendEmail",
+            "config": {
+              "defaultRoute": false,
+              "method": "GET",
+              "route": "/send"
+            }
+          }
+        ],
+        "lastUpdated": 1606204699288
+      }
+    },
+    "openFiles": [
+      "24de73ea-7985-43d6-8485-da4aac160a57"
+    ],
+    "currentFileId": "24de73ea-7985-43d6-8485-da4aac160a57",
+    "resources": {
+      "httpApigsendEmail": {
+        "name": "httpApigsendEmail",
+        "type": "API_GATEWAY",
+        "config": {
+          "apiType": 2,
+          "mode": 0,
+          "apiName": "sendEmail",
+          "stageName": "email",
+          "corsConfig": {
+            "maxAge": 0,
+            "allowCredentials": false
+          }
+        }
+      },
+      "ses-netra.chandrasekhar@vitap.ac.in": {
+        "name": "ses-netra.chandrasekhar@vitap.ac.in",
+        "type": "SES",
+        "config": {
+          "selectedIdentity": "netra.chandrasekhar@vitap.ac.in",
+          "projectRegion": "us-east-2"
+        }
+      }
+    },
+    "customTemplate": {
+      "syntax": "JSON",
+      "overrideDefault": false,
+      "dialect": null,
+      "definitions": null
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {
+        "boto3": {
+          "name": "boto3",
+          "language": "python",
+          "version": "1.12.27",
+          "dev": true,
+          "notRemovable": false
+        }
+      }
+    }
+  },
+  "PROJECT_META": {
+    "sigmaVersion": "1.4.4.1",
+    "projectName": "sendEmail",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-2",
+    "platform": "AWS",
+    "language": "python",
+    "platformRegions": {}
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "sendemail",
+      "url": "https://github.com/Netra24/sendemail"
+    }
+  }
+}
